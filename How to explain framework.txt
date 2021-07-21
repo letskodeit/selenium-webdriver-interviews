@@ -1,0 +1,15 @@
+
+
+We use Java as a programming language and TestNG as the testing framework.
+
+We use Maven for managing all the dependencies needed for our project and we are using GitHub for version  control to check-in our code files.
+
+Our framework is built with Data Driven approach with a combination of Page Object Model. We use Test data from external files because we should never hard-code the test data and we use Apache POI to read Test Data from Excel files.
+
+We use Extent Reports for detailed reporting because it's a very important component of any framework. We are using Log4j2 for logging all the details of the automation workflow for debugging purpose. We take screenshots for failed test cases and we attach screenshots to automation reports also.
+
+Our framework is very modular and we have created page classes for all the common components, not just for particular pages. If there is something common which occurs in different pages, then we create Page Object for that also so that different Test Classes can make use of it. We are avoiding all the redundancy, we follow DRY Principle which means Don't Repeat Yourself so that we have an efficient code out there.
+
+We are using TestNG XML files for handling different Test Suites like Sanity Test Suite and Regression Test Suite and we are using Jenkins to run those different kind of Test Suites.
+
+Whenever there is a deployment, our Sanity Test Suite is triggered and we have multiple Regression Test Suites which run on different schedule. Some are triggered nightly, some are triggered every two days and some are triggered weekly and their schedule also depends on how much time a particular Test Suite takes to complete. As an example, our Sanity Test Suite completes under one hour, which verifies basic functionality. Our nightly suite runs for 8 hours and weekend suite runs for about 24 hours so that we are covering all levels of testing.
